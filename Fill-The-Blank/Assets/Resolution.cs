@@ -10,7 +10,7 @@ public class Resolution : MonoBehaviour
     public RectTransform m_Character;
     public RectTransform m_Menu;
     public RectTransform m_BattlePass;
-
+    
     void Start()
     {
         float w = m_Screen.rect.width;

@@ -6,15 +6,19 @@ public class Button : MonoBehaviour
 {
     public GameObject m_MainMenu;
     public GameObject m_BattlePass;
+    public GameObject m_Avatar;
+    public GameObject m_Currency;
 
     public void AvatarClick()
     {
         Debug.Log("Avatar Opened!\n");
+        m_Avatar.SetActive(true);
     }
 
     public void CurrencyClick()
     {
         Debug.Log("Currency Opened!\n");
+        m_Currency.SetActive(true);
     }
 
     public void BattlePassClick()
@@ -28,6 +32,8 @@ public class Button : MonoBehaviour
     {
         m_MainMenu.SetActive(true);
         m_BattlePass.SetActive(false);
+        m_Avatar.SetActive(false);
+        m_Currency.SetActive(false);
     }
 
     public void PlayClick()
