@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    public GameObject m_MainMenu;
+    public GameObject m_BattlePass;
+
     public void AvatarClick()
     {
         Debug.Log("Avatar Opened!\n");
@@ -17,6 +20,14 @@ public class Button : MonoBehaviour
     public void BattlePassClick()
     {
         Debug.Log("Battle Pass Opened!\n");
+        m_MainMenu.SetActive(false);
+        m_BattlePass.SetActive(true);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        m_MainMenu.SetActive(true);
+        m_BattlePass.SetActive(false);
     }
 
     public void PlayClick()
