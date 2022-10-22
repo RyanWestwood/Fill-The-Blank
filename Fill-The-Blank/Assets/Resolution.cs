@@ -27,7 +27,7 @@ public class Resolution : MonoBehaviour
     public void ClampBattlePass()
     {
         //Debug.Log("Hello");
-        float pos = Mathf.Clamp(m_BattlePass.anchoredPosition.y, 0, 1500);
+        float pos = Mathf.Clamp(m_BattlePass.anchoredPosition.y, 0, 1200);
         m_BattlePass.anchoredPosition = new Vector2(0, pos);
     }
 }
