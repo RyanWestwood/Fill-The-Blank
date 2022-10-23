@@ -5,10 +5,13 @@ using Unity.Services.Mediation;
 
 public class UnityAdsManager : MonoBehaviour
 {
-   public string GAME_ID = "4985434"; //optional, we will autofetch the gameID if the project is linked in the dashboard
-   IRewardedAd m_AD;
+#if UNITY_IOS
+    public string GAME_ID = "4985434"; //optional, we will autofetch the gameID if the project is linked in the dashboard
+#elif UNITY_ANDROID
+    public string GAME_ID = "4985435"; //optional, we will autofetch the gameID if the project is linked in the dashboard
+#endif
+    IRewardedAd m_AD;
   
-
    public void OnInitializeClicked()
    {
        Initialize();
