@@ -4136,6 +4136,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 118730093}
     m_Modifications:
+    - target: {fileID: 5437186376521383154, guid: 9fdc02ae691d6de4981160aa41d4168e,
+        type: 3}
+      propertyPath: m_text
+      value: John
+      objectReference: {fileID: 0}
     - target: {fileID: 5437186376521383155, guid: 9fdc02ae691d6de4981160aa41d4168e,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -8847,6 +8852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFX Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 7101778618701870999, guid: a1cc57c855dee61419c0f2d5158276d8,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 156610309}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1cc57c855dee61419c0f2d5158276d8, type: 3}
 --- !u!224 &740959116 stripped
@@ -10395,6 +10405,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 118730093}
     m_Modifications:
+    - target: {fileID: 5437186376521383154, guid: 9fdc02ae691d6de4981160aa41d4168e,
+        type: 3}
+      propertyPath: m_text
+      value: Jeffery
+      objectReference: {fileID: 0}
     - target: {fileID: 5437186376521383155, guid: 9fdc02ae691d6de4981160aa41d4168e,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -12368,6 +12383,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 118730093}
     m_Modifications:
+    - target: {fileID: 5437186376521383154, guid: 9fdc02ae691d6de4981160aa41d4168e,
+        type: 3}
+      propertyPath: m_text
+      value: Julie
+      objectReference: {fileID: 0}
     - target: {fileID: 5437186376521383155, guid: 9fdc02ae691d6de4981160aa41d4168e,
         type: 3}
       propertyPath: m_AnchorMax.y
