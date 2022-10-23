@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Button : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Button : MonoBehaviour
     public GameObject m_GameplayUI;
 
     public GameObject m_GameOver;
+
+    public TextMeshProUGUI m_BrushesText;
 
     public void AvatarClick()
     {
@@ -80,6 +83,14 @@ public class Button : MonoBehaviour
     {
         Debug.Log("Character Opened!\n");
         m_Settings.SetActive(true);
+    }
+
+    public void IncreaseBushes()
+    {
+        var current = PlayerPrefs.GetInt("Brushes");
+        current += 25;
+        PlayerPrefs.SetInt("Brushes", current);
+        m_BrushesText.text = current.ToString();
     }
 
     //  Temp until gameplay is optimised. 
