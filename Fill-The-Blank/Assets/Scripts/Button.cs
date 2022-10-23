@@ -9,6 +9,9 @@ public class Button : MonoBehaviour
     public GameObject m_Avatar;
     public GameObject m_Currency;
 
+    public GameObject m_MainMenuUI;
+    public GameObject m_GameplayUI;
+
     public void AvatarClick()
     {
         Debug.Log("Avatar Opened!\n");
@@ -34,11 +37,16 @@ public class Button : MonoBehaviour
         m_BattlePass.SetActive(false);
         m_Avatar.SetActive(false);
         m_Currency.SetActive(false);
+
+        m_GameplayUI.SetActive(false);
+        m_MainMenuUI.SetActive(true);
     }
 
     public void PlayClick()
     {
         Debug.Log("Play Game!\n");
+        m_GameplayUI.SetActive(true);
+        m_MainMenuUI.SetActive(false);
     }
 
     public void ZenClick()
