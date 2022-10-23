@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Button : MonoBehaviour
@@ -17,6 +18,10 @@ public class Button : MonoBehaviour
     public GameObject m_GameOver;
 
     public TextMeshProUGUI m_BrushesText;
+
+    public Slider m_MasterVolumeSlider;
+    public Slider m_MusicVolumeSlider;
+    public Slider m_SfxVolumeSlider;
 
     public void AvatarClick()
     {
@@ -44,6 +49,10 @@ public class Button : MonoBehaviour
         m_BattlePass.SetActive(false);
         m_Avatar.SetActive(false);
         m_Currency.SetActive(false);
+
+        PlayerPrefs.SetInt("Master", (int)m_MasterVolumeSlider.value);
+        PlayerPrefs.SetInt("Music", (int)m_MusicVolumeSlider.value);
+        PlayerPrefs.SetInt("Sfx", (int)m_SfxVolumeSlider.value);
         m_Settings.SetActive(false);
         m_GameOver.SetActive(false);
 
@@ -81,6 +90,9 @@ public class Button : MonoBehaviour
 
     public void SettingsClick()
     {
+        m_MasterVolumeSlider.value = PlayerPrefs.GetInt("Master");
+        m_MusicVolumeSlider.value = PlayerPrefs.GetInt("Music");
+        m_SfxVolumeSlider.value = PlayerPrefs.GetInt("Sfx");
         Debug.Log("Character Opened!\n");
         m_Settings.SetActive(true);
     }
