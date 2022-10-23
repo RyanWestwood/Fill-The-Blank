@@ -13,6 +13,8 @@ public class Button : MonoBehaviour
     public GameObject m_MainMenuUI;
     public GameObject m_GameplayUI;
 
+    public GameObject m_GameOver;
+
     public void AvatarClick()
     {
         Debug.Log("Avatar Opened!\n");
@@ -40,6 +42,7 @@ public class Button : MonoBehaviour
         m_Avatar.SetActive(false);
         m_Currency.SetActive(false);
         m_Settings.SetActive(false);
+        m_GameOver.SetActive(false);
 
         m_GameplayUI.SetActive(false);
         m_MainMenuUI.SetActive(true);
@@ -87,5 +90,10 @@ public class Button : MonoBehaviour
         {
             Destroy(obj);
         }
+    }
+
+    public void DebugGameplayFinish()
+    {
+        m_GameOver.SetActive(true);
     }
 }
