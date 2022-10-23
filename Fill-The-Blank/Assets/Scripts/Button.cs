@@ -8,6 +8,7 @@ public class Button : MonoBehaviour
     public GameObject m_BattlePass;
     public GameObject m_Avatar;
     public GameObject m_Currency;
+    public GameObject m_Settings;
 
     public GameObject m_MainMenuUI;
     public GameObject m_GameplayUI;
@@ -33,10 +34,12 @@ public class Button : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        DestroyAllBrushes();
         m_MainMenu.SetActive(true);
         m_BattlePass.SetActive(false);
         m_Avatar.SetActive(false);
         m_Currency.SetActive(false);
+        m_Settings.SetActive(false);
 
         m_GameplayUI.SetActive(false);
         m_MainMenuUI.SetActive(true);
@@ -44,6 +47,7 @@ public class Button : MonoBehaviour
 
     public void PlayClick()
     {
+        DestroyAllBrushes();
         Debug.Log("Play Game!\n");
         m_GameplayUI.SetActive(true);
         m_MainMenuUI.SetActive(false);
@@ -67,5 +71,21 @@ public class Button : MonoBehaviour
     public void CharacterClick()
     {
         Debug.Log("Character Opened!\n");
+    }
+
+    public void SettingsClick()
+    {
+        Debug.Log("Character Opened!\n");
+        m_Settings.SetActive(true);
+    }
+
+    //  Temp until gameplay is optimised. 
+    private void DestroyAllBrushes()
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Brush");
+        foreach (GameObject obj in taggedObjects)
+        {
+            Destroy(obj);
+        }
     }
 }
