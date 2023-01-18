@@ -9,6 +9,8 @@ public class UnityAdsManager : MonoBehaviour
     public string GAME_ID = "4985434"; //optional, we will autofetch the gameID if the project is linked in the dashboard
 #elif UNITY_ANDROID
     public string GAME_ID = "4985435"; //optional, we will autofetch the gameID if the project is linked in the dashboard
+#else
+    public string GAME_ID = "0";
 #endif
     IRewardedAd m_AD;
   
