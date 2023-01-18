@@ -3,54 +3,49 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class DataHolder : MonoBehaviour
+[Serializable]
+public class DataTable<T>
 {
     [Serializable]
-    public struct Icon
+    public struct Item
     {
         public string name;
-        public Texture2D image;
+        public T value;
     }
 
-    public Icon[] Brushes;
-    private Dictionary<string, Texture2D> m_Brushes = new Dictionary<string, Texture2D>();
+    public Item[] Items;
+    private Dictionary<string, T> m_Items = new Dictionary<string, T>();
 
-    public Icon[] Balls;
-    private Dictionary<string, Texture2D> m_Balls = new Dictionary<string, Texture2D>();
-
-    void Start()
+    public void Initialize()
     {
-        CreateDictionary(Brushes, m_Brushes);
-        CreateDictionary(Balls, m_Balls);
-    }
-
-    public Texture2D GetBrush(string name)
-    {
-        if (m_Brushes.ContainsKey(name))
+        for (int i = 0; i < Items.Length; i++)
         {
-            Debug.Log("Brush key found: " + name);
-            return m_Brushes[name];
+            m_Items.Add(Items[i].name, Items[i].value);
         }
-        Debug.Log("Brush key not found: " + name);
-        return new Texture2D(64,64);
     }
 
-    public Texture2D GetBall(string name)
+    public T GetItem(string name)
     {
-        if (m_Balls.ContainsKey(name))
+        if (m_Items.ContainsKey(name))
         {
-            Debug.Log("Brush key found: " + name);
-            return m_Balls[name];
+            Debug.Log("Key found: " + name);
+            return m_Items[name];
         }
-        Debug.Log("Brush key not found: " + name);
-        return new Texture2D(64, 64);
+        Debug.Log("Key not found: " + name);
+        return default(T);
     }
+}
 
-    private void CreateDictionary(Icon[] array, Dictionary<string, Texture2D> dict)
+public class DataHolder : MonoBehaviour
+{
+    public DataTable<Texture2D> m_Brushes = new DataTable<Texture2D>();
+    public DataTable<Texture2D> m_Balls = new DataTable<Texture2D>();
+    public DataTable<string> m_Names = new DataTable<string>();
+
+    private void Awake()
     {
-        for (int i = 0; i < array.Length; i++)
-        {
-            dict.Add(array[i].name, array[i].image);
-        }
+        m_Brushes.Initialize();
+        m_Balls.Initialize();
+        m_Names.Initialize();
     }
 }

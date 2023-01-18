@@ -13,6 +13,6 @@ public class DebugScript : MonoBehaviour
 
     public void Test()
     {
-        m_Table.GetBrush("one");
+        //m_Table.GetBrush("one");
     }
 }
