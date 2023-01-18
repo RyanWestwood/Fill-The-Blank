@@ -33,10 +33,9 @@ public class DataTable<T>
     {
         if (m_Items.ContainsKey(name))
         {
-            Debug.Log("Key found: " + name);
             return m_Items[name];
         }
-        Debug.Log("Key not found: " + name);
+        Debug.LogError("Key not found: " + name);
         return default(T);
     }
 }
