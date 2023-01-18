@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DebugScript : MonoBehaviour
 {
-    public DataHolder m_Table;
+    //public DataHolder m_Table;
 
     void Start()
     {
-        m_Table = GetComponent<DataHolder>();
+        //m_Table = GetComponent<DataHolder>();
     }
 
     public void Test()

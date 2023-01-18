@@ -4,16 +4,16 @@ using System;
 using UnityEngine;
 
 [Serializable]
+public struct Item<T>
+{
+    public string name;
+    public T value;
+}
+
+[Serializable]
 public class DataTable<T>
 {
-    [Serializable]
-    public struct Item
-    {
-        public string name;
-        public T value;
-    }
-
-    public Item[] Items;
+    public Item<T>[] Items;
     private Dictionary<string, T> m_Items = new Dictionary<string, T>();
 
     public void Initialize()
@@ -22,6 +22,11 @@ public class DataTable<T>
         {
             m_Items.Add(Items[i].name, Items[i].value);
         }
+    }
+
+    public Dictionary<string, T> GetDict()
+    {
+        return m_Items;
     }
 
     public T GetItem(string name)
@@ -33,19 +38,5 @@ public class DataTable<T>
         }
         Debug.Log("Key not found: " + name);
         return default(T);
-    }
-}
-
-public class DataHolder : MonoBehaviour
-{
-    public DataTable<Texture2D> m_Brushes = new DataTable<Texture2D>();
-    public DataTable<Texture2D> m_Balls = new DataTable<Texture2D>();
-    public DataTable<string> m_Names = new DataTable<string>();
-
-    private void Awake()
-    {
-        m_Brushes.Initialize();
-        m_Balls.Initialize();
-        m_Names.Initialize();
     }
 }
