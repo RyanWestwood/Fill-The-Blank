@@ -68,7 +68,8 @@ public class UnityAdsManager : MonoBehaviour
          }
          catch(Exception e)
          {
-            //handle failure here
+                //handle failure here
+                Debug.LogError(e);
          }
        }
    }
