@@ -3,13 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-[Serializable]
-public class ButtonInfo
-{
-    string name;
-    Sprite image;
-}
+using TMPro;
 
 [Serializable]
 public class Icons
@@ -25,9 +19,9 @@ public class Icons
         foreach (var item in m_Brushes.GetDict())
         {
             m_Buttons[index].GetComponentInChildren<Image>().sprite = item.Value;
+            m_Buttons[index].GetComponentInChildren<TextMeshProUGUI>().text = "500";
             index++;
         }
-        Debug.Log("hi");
     }
 }
 
@@ -42,6 +36,7 @@ public class CosmeticShop : MonoBehaviour
         m_Balls.Initialize();
     }
 
+    //  TODO: Delete this before submission
     private void Update()
     {
         //Debug.Log("£");

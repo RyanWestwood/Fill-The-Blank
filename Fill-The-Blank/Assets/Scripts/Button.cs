@@ -23,6 +23,13 @@ public class Button : MonoBehaviour
     public Slider m_MusicVolumeSlider;
     public Slider m_SfxVolumeSlider;
 
+    private void Start()
+    {
+        m_MasterVolumeSlider.value = PlayerPrefs.GetInt("Master");
+        m_MusicVolumeSlider.value = PlayerPrefs.GetInt("Music");
+        m_SfxVolumeSlider.value = PlayerPrefs.GetInt("Sfx");
+    }
+
     public void AvatarClick()
     {
         Debug.Log("Avatar Opened!\n");

@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.UI;
+using TMPro;
 
 public class DebugScript : MonoBehaviour
 {
-    //public DataHolder m_Table;
+    public Localization m_Table;
+    public TextMeshProUGUI m_BattlePass;
 
     void Start()
     {
-        //m_Table = GetComponent<DataHolder>();
+        m_Table = GetComponent<Localization>();
+        //m_BattlePass.text = 
     }
 
     public void Test()
     {
-        //m_Table.GetBrush("one");
+        m_BattlePass.text = m_Table.GetText("hello");
     }
 }
