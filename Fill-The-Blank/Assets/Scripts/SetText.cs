@@ -7,19 +7,19 @@ public class SetText : MonoBehaviour
 {
     private Localization m_LanguageTable;
 
-    // Main Menu
+    [Header("Main Menu"), Tooltip("")]
     public TextMeshProUGUI m_BattlePass;
     public TextMeshProUGUI m_Play;
     public TextMeshProUGUI m_Zen;
 
-    // Settings Menu
+    [Header("Settings Menu"), Tooltip("")]
     public TextMeshProUGUI m_SettingsTitle;
     public TextMeshProUGUI m_Music;
     public TextMeshProUGUI m_TrackingTitle;
     public TextMeshProUGUI m_TrackingOption1;
     public TextMeshProUGUI m_TrackingOption2;
 
-    // Avatar Menu
+    [Header("Avatar Menu"), Tooltip("")]
     public TextMeshProUGUI m_AvatarTitle;
     public TextMeshProUGUI m_AchievementsTitle;
     public TextMeshProUGUI m_Achievement1;
@@ -27,11 +27,11 @@ public class SetText : MonoBehaviour
     public TextMeshProUGUI m_Achievement3;
     public TextMeshProUGUI m_LeaderboardsTitle;
 
-    // Currency Menu
+    [Header("Currency Menu"), Tooltip("")]
     public TextMeshProUGUI m_CurrencyTitle;
     public TextMeshProUGUI m_WatchAd;
 
-    // Upgrade Menu
+    [Header("Upgrade Menu"), Tooltip("")]
     public TextMeshProUGUI m_UpgradeTitle;
     public TextMeshProUGUI m_BrushSize;
     public TextMeshProUGUI m_BallSize;
@@ -44,12 +44,12 @@ public class SetText : MonoBehaviour
     public TextMeshProUGUI m_Buy4;
     public TextMeshProUGUI m_Buy5;
 
-    // Cosmetic Menu
+    [Header("Cosmetic Menu"), Tooltip("")]
     public TextMeshProUGUI m_CosmeticTitle;
     public TextMeshProUGUI m_BrushTitle;
     public TextMeshProUGUI m_BallTitle;
 
-    // Game Over Menu
+    [Header("Game-over Menu"), Tooltip("")]
     public TextMeshProUGUI m_CompletedTitle;
     public TextMeshProUGUI m_TimeTitle;
     public TextMeshProUGUI m_BrushesTitle;

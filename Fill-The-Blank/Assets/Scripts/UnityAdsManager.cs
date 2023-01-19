@@ -5,10 +5,11 @@ using Unity.Services.Mediation;
 
 public class UnityAdsManager : MonoBehaviour
 {
+
 #if UNITY_IOS
     public string GAME_ID = "4985434"; //optional, we will autofetch the gameID if the project is linked in the dashboard
 #elif UNITY_ANDROID
-    public string GAME_ID = "4985435"; //optional, we will autofetch the gameID if the project is linked in the dashboard
+    public string GAME_ID = "4985434"; //optional, we will autofetch the gameID if the project is linked in the dashboard
 #else
     public string GAME_ID = "0";
 #endif
@@ -123,9 +124,9 @@ public class UnityAdsManager : MonoBehaviour
        Debug.Log("Ad Closed");
    }
 
-   void OnUserRewarded(object sender, RewardEventArgs e)
-   {
-       Debug.Log($"Received reward: type:{e.Type}; amount:{e.Amount}");
-       // DO something here?
-   }
+    void OnUserRewarded(object sender, RewardEventArgs e)
+    {
+        Debug.Log($"Received reward: type:{e.Type}; amount:{e.Amount}");
+        // DO something here?
+    }
 }

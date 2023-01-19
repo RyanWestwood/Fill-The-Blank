@@ -9526,6 +9526,7 @@ GameObject:
   - component: {fileID: 798644055}
   - component: {fileID: 798644056}
   - component: {fileID: 798644057}
+  - component: {fileID: 798644058}
   m_Layer: 0
   m_Name: Script Holder
   m_TagString: Untagged
@@ -9977,6 +9978,24 @@ MonoBehaviour:
   m_TimeTitle: {fileID: 1663465113}
   m_BrushesTitle: {fileID: 2063282923}
   m_Return: {fileID: 420509724}
+--- !u!114 &798644058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798644044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9b26abaa7986c4aa3e416f16af535f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidAdUnitId: 4985435
+  iosAdUnitId: 
+  iosGameId: 
+  androidGameId: 
+  bannerAdAnchor: 6
+  bannerSize: 3
 --- !u!114 &804407678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3736046114904191294, guid: 7786949d79b4a8048a1b6a0ea7b24010,
