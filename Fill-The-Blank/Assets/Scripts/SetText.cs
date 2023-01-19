@@ -49,6 +49,12 @@ public class SetText : MonoBehaviour
     public TextMeshProUGUI m_BrushTitle;
     public TextMeshProUGUI m_BallTitle;
 
+    // Game Over Menu
+    public TextMeshProUGUI m_CompletedTitle;
+    public TextMeshProUGUI m_TimeTitle;
+    public TextMeshProUGUI m_BrushesTitle;
+    public TextMeshProUGUI m_Return;
+
     void Start()
     {
         m_LanguageTable = GetComponent<Localization>();
@@ -94,5 +100,11 @@ public class SetText : MonoBehaviour
         m_CosmeticTitle.text = m_LanguageTable.GetText("cosmetic_title");
         m_BrushTitle.text = m_LanguageTable.GetText("brush");
         m_BallTitle.text = m_LanguageTable.GetText("ball");
+
+        // Game-Over Menu
+        m_CompletedTitle.text = m_LanguageTable.GetText("completed");
+        m_TimeTitle.text = m_LanguageTable.GetText("time");
+        m_BrushesTitle.text = m_LanguageTable.GetText("brushes");
+        m_Return.text = m_LanguageTable.GetText("return");
     } 
 }

@@ -9903,6 +9903,34 @@ MonoBehaviour:
         - Ver un anuncio
         - Regarder une annonce
         - Guarda un annuncio
+    - name: completed
+      value:
+        language:
+        - Completed
+        - Terminada
+        - "Compl\xE9t\xE9"
+        - Completato
+    - name: time
+      value:
+        language:
+        - Time
+        - Hora
+        - Temps
+        - Tempo
+    - name: brushes
+      value:
+        language:
+        - Brushes
+        - Cepillos
+        - Brosses
+        - Spazzole
+    - name: return
+      value:
+        language:
+        - Return
+        - Retorno
+        - Revenir
+        - Ritorno
 --- !u!114 &798644057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9945,6 +9973,10 @@ MonoBehaviour:
   m_CosmeticTitle: {fileID: 681435075}
   m_BrushTitle: {fileID: 1324816895}
   m_BallTitle: {fileID: 806395964}
+  m_CompletedTitle: {fileID: 1628380939}
+  m_TimeTitle: {fileID: 1663465113}
+  m_BrushesTitle: {fileID: 2063282923}
+  m_Return: {fileID: 420509724}
 --- !u!114 &804407678 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3736046114904191294, guid: 7786949d79b4a8048a1b6a0ea7b24010,
@@ -13890,7 +13922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1283715791
 RectTransform:
   m_ObjectHideFlags: 0
